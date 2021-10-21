@@ -1,3 +1,24 @@
 .body{
     background-color: aquamarine;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+.div{
+    float: center;
+}
+#Clock{
+    background-color: white;
+    border-radius: 40px;
+    border: solid 5px black;
+    width: 70%;
+    align-items: center;
+}
+#Time{
+    
+}
+#AM_PM{
+    
+}
+.font{
+    
 }
