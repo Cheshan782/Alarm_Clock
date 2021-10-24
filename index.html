@@ -19,7 +19,7 @@
     </script>
     <title>Alarm Clock</title>
 </head>
-<body class="body">
+<body class="body" onload="initClock">
     <div>
         <!--Title-->
         <div class="Title">
@@ -28,8 +28,14 @@
         </div>
         <!--Time-->
         <div id="Clock">
-            <div id="Time"><h1></h1></div>
-            <div id="AM_PM"><h3>PM</h3></div>
+            <span class="Day">Day</span>,
+            <span class="Month">Month</span>
+            <span class="Num">00</span>,
+            <span class="Year">Year</span>
+            <span class="Hours">00</span>
+            <span class="Min">00</span>
+            <span class="Sec">00</span>
+            <span class="PE">AM</span>
         </div>
     </div>
 </body>

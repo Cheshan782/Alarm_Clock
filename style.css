@@ -10,13 +10,17 @@
     background-color: white;
     border-radius: 40px;
     border: solid 5px black;
-    width: 70%;
+    padding: 10px;
+    width: 200px;
+    align-items: center;
+    text-align: center;
+    display: block;
     align-items: center;
 }
-#Time{
-    
+.Time{
+
 }
-#AM_PM{
+.AMPM{
     
 }
 .font{
