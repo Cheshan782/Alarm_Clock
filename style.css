@@ -1,22 +1,43 @@
+/*Imported Fonts*/
+@font-face {
+    font-family: Clock-Font;
+    src: url(./Fonts/Clock/TickingTimebombBB.ttf);
+}
+@font-face {
+    font-family: Reg-Font;
+    src: url(./Fonts/Reg_Font/KGHAPPYSolid.ttf);
+}
+/*Start-Up*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .body{
     background-color: #040BB7;
-    font-family: 'Source Code Pro', monospace;
-    
 }
-.div{
-    float: center;
-}
+/*Clock Style*/
 #Clock{
     background-color: #00B2EA;
-    border-radius: 40px;
-    border: solid 5px black;
-    padding: 10px;
-    width: 400px;
-    align-items: center;
     text-align: center;
-    display: block;
-    align-items: center;
+    border-radius: 40px;  
+    margin: auto;
+    width: 500px;
+    border: 5px solid #017BFF;
+    padding: 10px;
 }
+/*Title*/
 .title{
     text-align: center;
+    font-family: 'Reg-Font', cursive;
+}
+/*Clock Elements*/
+.time{
+    font-family: 'Clock-Font', cursive;
+    font-size: 80px;
+}
+
+.date{
+    font-family: 'Reg-Font', cursive;
+    font-size: 30px;
 }
