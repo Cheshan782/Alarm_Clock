@@ -1,5 +1,5 @@
 .body{
-    background-color: aquamarine;
+    background-color: #040BB7;
     font-family: 'Source Code Pro', monospace;
     
 }
@@ -7,22 +7,16 @@
     float: center;
 }
 #Clock{
-    background-color: white;
+    background-color: #00B2EA;
     border-radius: 40px;
     border: solid 5px black;
     padding: 10px;
-    width: 200px;
+    width: 400px;
     align-items: center;
     text-align: center;
     display: block;
     align-items: center;
 }
-.Time{
-
-}
-.AMPM{
-    
-}
-.font{
-    
+.title{
+    text-align: center;
 }
