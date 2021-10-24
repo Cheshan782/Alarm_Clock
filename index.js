@@ -1,3 +1,4 @@
+/*Clock*/
 function updateClock(){
     var now = new Date();
     var dname = now.getDay(),
@@ -18,7 +19,10 @@ function updateClock(){
         if(hou > 12){
           hou = hou - 12;
         }
-
+        if(hou == 12){
+          var audio = new Audio('Ring_Tone');
+          audio.play();
+        }
         Number.prototype.pad = function(digits){
           for(var n = this.toString(); n.length < digits; n = 0 + n);
           return n;
@@ -36,4 +40,8 @@ function updateClock(){
     updateClock();
     window.setInterval("updateClock()", 1);
   }
+  
+  var audio = new Audio('Ring_Tone');
+  audio.play();
+
 

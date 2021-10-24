@@ -13,9 +13,8 @@
     <!--File Link-->
     <link rel="stylesheet" href="style.css">
     <script src="index.js">
-        const d = new Date();
-        let time = Date.getTime()
-        document.getElementById("Time").innerHTML = time;
+        var audio = new Audio('Ring_Tone');
+        audio.play();
     </script>
     <title>Alarm Clock</title>
 </head>
@@ -23,7 +22,7 @@
     <!--Title-->
     <div class="title">
         <h1>Alarm Clock</h1>
-        <h3>By:Cheshan Umashangar</h3>
+        <h3>By: Cheshan Umashangar</h3>
     </div>
     <br>
     <!--digital clock start-->
@@ -44,5 +43,14 @@
             </div>
         </div>
     </div>
+    <!--Digital Clock End-->
+    <br>
+    <!--Alarm Start-->
+    <div class="alarm">
+        <span id="A-hour">00</span>:
+        <span id="A-minutes">00</span>:
+        <span id="A-period">AM</span>
+    </div>
+    <!--Alarm End-->
 </body>
 </html>
