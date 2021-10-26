@@ -41,3 +41,19 @@
     font-family: 'Reg-Font', cursive;
     font-size: 30px;
 }
+.alarm{
+    text-align: center;
+    font-family: 'Reg-Font';
+}
+#alarmTime, #alarmButton{
+    background-color: aquamarine;
+    border: none;
+    height: 30px;
+    cursor:pointer;
+    margin: auto;
+    float: center;
+}
+#alarmOptions{
+    width: 295px;
+    background-color: aquamarine;
+}
