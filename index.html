@@ -13,10 +13,7 @@
     <!--File Link-->
     <link rel="stylesheet" href="style.css">
     
-    <script src="index.js">
-        var audio = new Audio('https://vincens2005.github.io/vr/Nyan...[original].mp3');
-        audio.play();
-    </script>
+    <script src="index.js"></script>
     <title>Alarm Clock</title>
 </head>
 <body class="body" onload="initClock()">
@@ -46,13 +43,16 @@
     </div>
     <!--Digital Clock End-->
     <br>
-    <!--Alarm Start-->
-    <div class="alarm">
-        <span id="A-hour">00</span>:
-        <span id="A-minutes">00</span>:
-        <span id="A-period">AM</span>
-    </div>
-    <!--Alarm End-->
-    <audio src="Ring_Tone.mp3" id="RingTone" loop="loop" autoplay="autoplay "></audio>
+    <section class="container">
+        
+        <div class="controls">
+            <button onclick="setAlarm()" class="button set-alarm">Set alarm</button>
+            <a href="form.html"><button onclick="clearAlarm()" class="button clear-alarm">Clear alarm</button></a>
+        </div>
+        <br>
+        <input onchange="setAlarmTime(this.value)" name="alarmTime" class="Alarm-Date" type="datetime-local">
+    </section>
+    <script src="index.js"></script>
+
 </body>
 </html>

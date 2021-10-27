@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Clock-Font;
+  src: url(./Fonts/Clock/TickingTimebombBB.ttf);
+}
+@font-face {
+  font-family: Reg-Font;
+  src: url(./Fonts/Reg_Font/KGHAPPY.ttf);
+}
 .body{
     background-color: #040BB7;
     font-family: 'Source Code Pro', monospace;
@@ -13,7 +21,7 @@
 .datetime{
     color: #fff;
     background: #00B2EA;
-    font-family: "Reg-Font", sans-serif;
+    font-family: "Clock-Font", sans-serif;
     width: 340px;
     padding: 15px 10px;
     border: 3px solid black;
@@ -59,4 +67,23 @@
     margin-top: 10px;
     padding: 0 5px;
     border-radius: 3px;
+  }
+  .controls{
+      width: 18%;
+      margin: 0 auto;
+  }
+  .button{
+    color: black;
+    background: aqua;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Reg-Font';
+  }
+  .Alarm-Date{
+    display: flex;
+    justify-content: center;
+    width: 18%;
+    background-color: aqua;
+    font-family: 'Reg-Font';
+    margin-left: 40.5%;
   }

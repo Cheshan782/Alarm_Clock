@@ -39,52 +39,54 @@ function updateClock(){
   }
   
 /*Alarm*/
-var alarmSound = new Audio();
-            alarmSound.src = 'Ring_Tone.mp3';
-            var alarmTimer;
-    
-            function setAlarm(button) {
-                var ms = document.getElementById('alarmTime').valueAsNumber;
-                if(isNaN(ms)) {
-                    alert('Invalid Date');
-                    return;
-                }
-    
-                var alarm = new Date(ms);
-                var alarmTime = new Date(alarm.getUTCFullYear(), alarm.getUTCMonth(), alarm.getUTCDate(),  alarm.getUTCHours(), alarm.getUTCMinutes(), alarm.getUTCSeconds());
-                
-                var differenceInMs = alarmTime.getTime() - (new Date()).getTime();
-    
-                if(differenceInMs < 0) {
-                    alert('Specified time is already passed');
-                    return;
-                }
-    
-                alarmTimer = setTimeout(initAlarm, differenceInMs);
-                button.innerText = 'Cancel Alarm';
-                button.setAttribute('onclick', 'cancelAlarm(this);');
-            };
-    
-            function cancelAlarm(button) {
-                clearTimeout(alarmTimer);
-                button.innerText = 'Set Alarm';
-                button.setAttribute('onclick', 'setAlarm(this);')
-            };
-    
-            function initAlarm() {
-                alarmSound.play();
-                document.getElementById('alarmOptions').style.display = '';
-            };
-    
-            function stopAlarm() {
-                alarmSound.pause();
-                alarmSound.currentTime = 0;
-                document.getElementById('alarmOptions').style.display = 'none';
-                cancelAlarm(document.getElementById('alarmButton'));
-            };
-    
-            function snooze() {
-                stopAlarm();
-                alarmTimer = setTimeout(initAlarm, 300000); // 5 * 60 * 1000 = 5 Minutes
-            };
+const display = document.getElementById('clock');
+const audio = new Audio('Ring_Tone.mp3');
+audio.loop = true;
+let alarmTime = null;
+let alarmTimeout = null;
 
+function updateTime() {
+    const date = new Date();
+
+    const hour = formatTime(date.getHours());
+    const minutes = formatTime(date.getMinutes());
+    const seconds = formatTime(date.getSeconds());
+
+
+
+    display.innerText=`${hour} : ${minutes} : ${seconds}`
+}
+
+function formatTime(time) {
+    if ( time < 10 ) {
+        return '0' + time;
+    }
+    return time;
+}
+
+function setAlarmTime(value) {
+    alarmTime = value;
+}
+
+function setAlarm() {
+    if(alarmTime) {
+        const current = new Date();
+        const timeToAlarm = new Date(alarmTime);
+
+        if (timeToAlarm > current) {
+            const timeout = timeToAlarm.getTime() - current.getTime();
+            alarmTimeout = setTimeout(() => audio.play(), timeout);
+            alert('Alarm set');
+        }
+    }
+}
+
+function clearAlarm() {
+    audio.pause();
+    if (alarmTimeout) {
+        clearTimeout(alarmTimeout);
+        alert('Good Morning!😁');
+    }
+}
+
+setInterval(updateTime, 1000);
