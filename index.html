@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <!--File Link-->
     <link rel="stylesheet" href="style.css">
+    
     <script src="index.js">
-        const d = new Date();
-        let time = Date.getTime()
-        document.getElementById("Time").innerHTML = time;
+        var audio = new Audio('https://vincens2005.github.io/vr/Nyan...[original].mp3');
+        audio.play();
     </script>
     <title>Alarm Clock</title>
 </head>
@@ -23,24 +23,36 @@
     <!--Title-->
     <div class="title">
         <h1>Alarm Clock</h1>
-        <h3>By:Cheshan Umashangar</h3>
+        <h3>By: Cheshan Umashangar</h3>
     </div>
+    <br>
     <!--digital clock start-->
     <div id="clock">
         <div class="datetime">
-        <div class="date">
-            <span id="dayname">Day</span>,
-            <span id="month">Month</span>
-            <span id="daynum">00</span>,
-            <span id="year">Year</span>
-        </div>
-        <div class="time">
-            <span id="hour">00</span>:
-            <span id="minutes">00</span>:
-            <span id="seconds">00</span>
-            <span id="period">AM</span>
-        </div>
+            <div class="date">
+                <span id="dayname">Day</span>,
+                <span id="month">Month</span>
+                <span id="daynum">00</span>,
+                <span id="year">Year</span>
+            </div>
+            <br>
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>
+                <span id="period">AM</span>
+            </div>
         </div>
     </div>
+    <!--Digital Clock End-->
+    <br>
+    <!--Alarm Start-->
+    <div class="alarm">
+        <span id="A-hour">00</span>:
+        <span id="A-minutes">00</span>:
+        <span id="A-period">AM</span>
+    </div>
+    <!--Alarm End-->
+    <audio src="Ring_Tone.mp3" id="RingTone" loop="loop" autoplay="autoplay "></audio>
 </body>
 </html>
