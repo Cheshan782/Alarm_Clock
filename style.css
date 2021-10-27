@@ -87,3 +87,22 @@
     font-family: 'Reg-Font';
     margin-left: 40.5%;
   }
+/*For.Html*/
+.form{
+  background-color: aquamarine;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+#form_input{
+  background-color: #040BB7;
+}
+#To_Do{
+  color: #040BB7;
+}
+#S-Day{
+  color: #040BB7;
+}
+#Date{
+  color: #040BB7;
+}
