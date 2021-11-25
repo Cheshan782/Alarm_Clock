@@ -90,3 +90,12 @@ function clearAlarm() {
 }
 
 setInterval(updateTime, 1000);
+
+function updateInfo(){
+  var Info_1 = document.getElementById("In_1")
+  var Info_2 = document.getElementById("In_2")
+  var Info_3 = document.getElementById("In_3")
+  console.log(Info_1 + Info_2 + Info_3)
+  window.alert("Great Goals!")
+  window.location.replace('https://www.morningbrew.com/daily/issues/latest');
+}
