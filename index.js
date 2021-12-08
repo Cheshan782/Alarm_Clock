@@ -76,7 +76,7 @@ function setAlarm() {
         if (timeToAlarm > current) {
             const timeout = timeToAlarm.getTime() - current.getTime();
             alarmTimeout = setTimeout(() => audio.play(), timeout);
-            alert('Alarm set');
+            alert('Alarm set! ⏰');
         }
     }
 }
