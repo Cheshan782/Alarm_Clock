@@ -7,7 +7,7 @@
   src: url(./Fonts/Reg_Font/KGHAPPY.ttf);
 }
 .body{
-    background-color: #040BB7;
+    background-color: #3d3d3d;
     font-family: 'Source Code Pro', monospace;
     
 }
@@ -20,7 +20,7 @@
 }
 .datetime{
     color: #fff;
-    background: #00B2EA;
+    background: black;
     font-family: "Clock-Font", sans-serif;
     width: 340px;
     padding: 15px 10px;
@@ -33,8 +33,8 @@
   }
   
   .datetime:hover{
-    background: #2E94E3;
-    box-shadow: 0 0 30px #2E94E3;
+    background: #3d3d3d;
+    box-shadow: 0 0 30px #3d3d3d;
   }
   
   .date{
@@ -60,7 +60,7 @@
   }
   
   .time span:last-child{
-    background: #2E94E3;
+    background: black;
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
@@ -73,9 +73,9 @@
       margin: 0 auto;
   }
   .button{
-    color: black;
-    background: aqua;
-    border: 1px solid black;
+    color: white;
+    background: black;
+    border: 1px solid white;
     text-align: center;
     font-family: 'Reg-Font';
   }
@@ -83,7 +83,8 @@
     display: flex;
     justify-content: center;
     width: 18%;
-    background-color: aqua;
+    color: white;
+    background-color: black;
     font-family: 'Reg-Font';
     margin-left: 40.5%;
   }
